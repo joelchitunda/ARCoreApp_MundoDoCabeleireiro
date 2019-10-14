@@ -1,0 +1,4 @@
+muriloCard|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/murilo.jpg
+earthAugmented|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/augmented-images-earth.jpg
+daniArt|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/dani-art.jpg
+hairFly|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/hairfly.jpg

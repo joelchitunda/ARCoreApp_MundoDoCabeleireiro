@@ -1,0 +1,1 @@
+arcoreimg.exe build-db --input_image_list_path=C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets\image_list_file.txt --output_db_path=C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/myimages.imgdb

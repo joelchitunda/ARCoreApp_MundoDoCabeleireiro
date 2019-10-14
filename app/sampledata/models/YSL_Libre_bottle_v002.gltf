@@ -1,0 +1,122 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "babylon.js glTF exporter for maya 2018 v1.3.1"
+    },
+    "extensionsUsed": ["GOOGLE_backgrounds", "ADOBE_materials_thin_transparency"],
+    "scene": 0,
+    "scenes": [{
+            "nodes": [0],
+            "extensions": {
+			    "GOOGLE_backgrounds": {
+                    "backgroundImage": {
+                        "index": 3
+                    },
+                    "color": [0, 0, 0]
+				}
+			}
+        }
+    ],"nodes":[{"children":[1,13],"translation":[-63.8637047,-315.34433,-3.08199143],"rotation":[0.228893712,0.04386185,0.127144143,0.9641152],"scale":[5.054196,5.054196,5.054196],"name":"RotateFix"},{"children":[2,3,4,5,11,12],"translation":[-44.63434,-122.861023,-23.3212452],"rotation":[0.0,0.112410083,0.0,0.9936619],"scale":[1.25,1.25,1.25],"name":"LibreBottle"},{"mesh":0,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"Cap"},{"mesh":1,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"Bottle"},{"mesh":2,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"Neck"},{"children":[6,7,8,9,10],"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"Liquid"},{"mesh":3,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"LiquidPart_1"},{"mesh":4,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"LiquidPart_2"},{"mesh":5,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"LiquidPart_3"},{"mesh":6,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"LiquidPart_4"},{"mesh":7,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"LiquidPart_5"},{"mesh":8,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"Logo"},{"mesh":9,"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0,1.0],"scale":[1.0,1.0,1.0],"name":"Knobs"},{"mesh":10,"translation":[-4.64786515E-10,-107.978813,1.06523144E-10],"rotation":[0.0,0.112410083,0.0,0.9936619],"scale":[0.001,0.001,0.001],"name":"MarbleStand"}],"meshes":[{"primitives":[{"attributes":{"POSITION":1,"NORMAL":2,"TEXCOORD_0":3},"indices":0,"mode":4,"material":0}],"name":"Cap"},{"primitives":[{"attributes":{"POSITION":5,"NORMAL":6,"TEXCOORD_0":7},"indices":4,"mode":4,"material":1}],"name":"Bottle"},{"primitives":[{"attributes":{"POSITION":9,"NORMAL":10,"TEXCOORD_0":11},"indices":8,"mode":4,"material":2}],"name":"Neck"},{"primitives":[{"attributes":{"POSITION":13,"NORMAL":14,"TEXCOORD_0":15},"indices":12,"mode":4,"material":3}],"name":"LiquidPart_1"},{"primitives":[{"attributes":{"POSITION":17,"NORMAL":18,"TEXCOORD_0":19},"indices":16,"mode":4,"material":3}],"name":"LiquidPart_2"},{"primitives":[{"attributes":{"POSITION":21,"NORMAL":22,"TEXCOORD_0":23},"indices":20,"mode":4,"material":3}],"name":"LiquidPart_3"},{"primitives":[{"attributes":{"POSITION":25,"NORMAL":26,"TEXCOORD_0":27},"indices":24,"mode":4,"material":3}],"name":"LiquidPart_4"},{"primitives":[{"attributes":{"POSITION":29,"NORMAL":30,"TEXCOORD_0":31},"indices":28,"mode":4,"material":3}],"name":"LiquidPart_5"},{"primitives":[{"attributes":{"POSITION":33,"NORMAL":34,"TEXCOORD_0":35},"indices":32,"mode":4,"material":4}],"name":"Logo"},{"primitives":[{"attributes":{"POSITION":37,"NORMAL":38,"TEXCOORD_0":39},"indices":36,"mode":4,"material":4}],"name":"Knobs"},{"primitives":[{"attributes":{"POSITION":41,"NORMAL":42,"TEXCOORD_0":43},"indices":40,"mode":4,"material":5}],"name":"MarbleStand"}],"accessors":[{"bufferView":0,"componentType":5123,"count":5232,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"componentType":5126,"count":5232,"max":[48.7646637,199.54454,44.3333931],"min":[12.4559746,151.25354,8.024654],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":62784,"componentType":5126,"count":5232,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"componentType":5126,"count":5232,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":10464,"componentType":5123,"count":12516,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":125568,"componentType":5126,"count":12516,"max":[74.3600159,138.46814,51.2978973],"min":[-13.1421509,13.3791065,1.05749512],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":275760,"componentType":5126,"count":12516,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":41856,"componentType":5126,"count":12516,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":35496,"componentType":5123,"count":11070,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":425952,"componentType":5126,"count":11070,"max":[48.19034,151.4624,43.7590828],"min":[13.0275574,138.010742,8.596298],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":558792,"componentType":5126,"count":11070,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":141984,"componentType":5126,"count":11070,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":57636,"componentType":5123,"count":3492,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":691632,"componentType":5126,"count":3492,"max":[70.55854,132.658813,45.3032227],"min":[-9.381989,33.929245,3.25033569],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":733536,"componentType":5126,"count":3492,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":230544,"componentType":5126,"count":3492,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":64620,"componentType":5123,"count":1920,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":775440,"componentType":5126,"count":1920,"max":[61.723484,34.8847046,44.2581635],"min":[-0.5075989,32.03412,8.097229],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":798480,"componentType":5126,"count":1920,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":258480,"componentType":5126,"count":1920,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":68460,"componentType":5123,"count":3570,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":821520,"componentType":5126,"count":3570,"max":[70.55853,132.658813,49.1050568],"min":[-9.381989,33.929245,7.05217],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":864360,"componentType":5126,"count":3570,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":273840,"componentType":5126,"count":3570,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":75600,"componentType":5123,"count":1536,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":907200,"componentType":5126,"count":1536,"max":[70.3201,134.9082,47.75139],"min":[-9.130493,132.026733,4.604004],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":925632,"componentType":5126,"count":1536,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":302400,"componentType":5126,"count":1536,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":78672,"componentType":5123,"count":1884,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":944064,"componentType":5126,"count":1884,"max":[67.829834,72.1211548,47.1582642],"min":[30.6669617,43.0465164,25.3278885],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":966672,"componentType":5126,"count":1884,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":314688,"componentType":5126,"count":1884,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":82440,"componentType":5123,"count":52764,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":989280,"componentType":5126,"count":52764,"max":[71.44855,94.8045654,59.11902],"min":[-20.925415,30.2533569,3.93199158],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":1622448,"componentType":5126,"count":52764,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":329760,"componentType":5126,"count":52764,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":187968,"componentType":5123,"count":2304,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":2255616,"componentType":5126,"count":2304,"max":[71.046875,94.2108154,61.6948242],"min":[-23.5108643,34.19078,4.6295166],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":2283264,"componentType":5126,"count":2304,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":751872,"componentType":5126,"count":2304,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":192576,"componentType":5123,"count":564,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":2310912,"componentType":5126,"count":564,"max":[50.0000229,50.0000153,28.4526939],"min":[-50.0000229,-50.0000153,-28.45269],"type":"VEC3","name":"accessorPositions"},{"bufferView":1,"byteOffset":2317680,"componentType":5126,"count":564,"type":"VEC3","name":"accessorNormals"},{"bufferView":2,"byteOffset":770304,"componentType":5126,"count":564,"type":"VEC2","name":"accessorUVs"},{"bufferView":3,"componentType":5126,"count":605,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":4,"componentType":5126,"count":605,"type":"VEC3","name":"accessorAnimationScales"},{"bufferView":3,"byteOffset":2420,"componentType":5126,"count":540,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":5,"componentType":5126,"count":540,"type":"VEC4","name":"accessorAnimationRotations"},{"bufferView":3,"byteOffset":4580,"componentType":5126,"count":612,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":4,"byteOffset":7260,"componentType":5126,"count":612,"type":"VEC3","name":"accessorAnimationPositions"},{"bufferView":3,"byteOffset":7028,"componentType":5126,"count":70,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":4,"byteOffset":14604,"componentType":5126,"count":70,"type":"VEC3","name":"accessorAnimationScales"},{"bufferView":3,"byteOffset":7308,"componentType":5126,"count":613,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":5,"byteOffset":8640,"componentType":5126,"count":613,"type":"VEC4","name":"accessorAnimationRotations"},{"bufferView":3,"byteOffset":9760,"componentType":5126,"count":631,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":4,"byteOffset":15444,"componentType":5126,"count":631,"type":"VEC3","name":"accessorAnimationPositions"},{"bufferView":3,"byteOffset":12284,"componentType":5126,"count":2,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":4,"byteOffset":23016,"componentType":5126,"count":2,"type":"VEC3","name":"accessorAnimationScales"},{"bufferView":3,"byteOffset":12292,"componentType":5126,"count":627,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":5,"byteOffset":18448,"componentType":5126,"count":627,"type":"VEC4","name":"accessorAnimationRotations"},{"bufferView":3,"byteOffset":14800,"componentType":5126,"count":61,"max":[26.9666672],"min":[0.0],"type":"SCALAR","name":"accessorAnimationInput"},{"bufferView":4,"byteOffset":23040,"componentType":5126,"count":61,"type":"VEC3","name":"accessorAnimationPositions"}],"bufferViews":[{"buffer":0,"byteLength":193704,"name":"bufferViewScalar"},{"buffer":0,"byteOffset":193704,"byteLength":2324448,"byteStride":12,"name":"bufferViewFloatVec3"},{"buffer":0,"byteOffset":2518152,"byteLength":774816,"byteStride":8,"name":"bufferViewFloatVec2"},{"buffer":0,"byteOffset":3292968,"byteLength":15044,"name":"bufferViewAnimationFloatScalar"},{"buffer":0,"byteOffset":3308012,"byteLength":23772,"name":"bufferViewAnimationFloatVec3"},{"buffer":0,"byteOffset":3331784,"byteLength":28480,"name":"bufferViewAnimationFloatVec4"}],"buffers":[{"uri":"YSL_Libre_bottle_v002.bin","byteLength":3360264}],
+"materials": [{
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.0, 0.0, 0.0, 1.0],
+                "metallicFactor": 1.0,
+                "roughnessFactor": 1.0
+            },
+            "emissiveFactor": [0.0, 0.0, 0.0],
+            "alphaMode": "OPAQUE",
+            "name": "CapMat"
+        }, {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [1.0, 1.0, 1.0, 1.0],
+                "metallicFactor": 1.0,
+                "roughnessFactor": 0.0
+            },
+            "extensions": {
+                "ADOBE_materials_thin_transparency": {
+                    "transmissionFactor": 1.0,
+                    "transmissionTexture": 0,
+                    "ior": 1.0
+                }
+            },
+            "emissiveFactor": [0.0, 0.0, 0.0],
+            "alphaMode": "BLEND",
+            "doubleSided": true,
+            "name": "GlassMat"
+        }, {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.8, 0.8, 0.8, 1.0],
+                "baseColorTexture": {
+                    "index": 1,
+                    "texCoord": 0
+                },
+                "metallicFactor": 1.0,
+                "roughnessFactor": 0.0
+            },
+            "normalTexture": {
+                "index": 0,
+                "texCoord": 0
+            },
+            "emissiveFactor": [0.0, 0.0, 0.0],
+            "alphaMode": "OPAQUE",
+            "doubleSided": true,
+            "name": "NeckMat"
+        }, {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [1.0, 0.66, 0.21, 0.3],
+                "metallicFactor": 1.0,
+                "roughnessFactor": 0.0
+            },
+            "emissiveFactor": [0.0, 0.0, 0.0],
+            "alphaMode": "BLEND",
+            "doubleSided": true,
+            "name": "LiquidMat"
+        }, {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [1.0, 0.66, 0.21, 1.0],
+                "metallicFactor": 1.0,
+                "roughnessFactor": 0.0
+            },
+            "emissiveFactor": [0.0, 0.0, 0.0],
+            "alphaMode": "OPAQUE",
+            "name": "GoldMat"
+        }, {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.8, 0.8, 0.8, 1.0],
+                "baseColorTexture": {
+                    "index": 2,
+                    "texCoord": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.1
+            },
+            "emissiveFactor": [0.0, 0.0, 0.0],
+            "alphaMode": "OPAQUE",
+            "name": "MarbleMat"
+        }
+    ],
+    "textures": [{
+            "sampler": 0,
+            "source": 0,
+            "name": "NeckMat_normal.png"
+        }, {
+            "sampler": 1,
+            "source": 1,
+            "name": "NeckMat_baseColor.png"
+        }, {
+            "sampler": 2,
+            "source": 2,
+            "name": "MarbleMat_baseColor.jpg"
+        }
+    ],
+    "images": [{
+            "uri": "NeckMat_normal.png"
+        }, {
+            "uri": "NeckMat_baseColor.png"
+        }, {
+            "uri": "MarbleMat_baseColor.jpg"
+        }, {
+            "uri": "marble_bg.jpg"
+        }
+    ],
+	"samplers":[{"magFilter":9729,"minFilter":9987,"wrapS":10497,"wrapT":10497},{"magFilter":9729,"minFilter":9987,"wrapS":10497,"wrapT":10497},{"magFilter":9729,"minFilter":9987,"wrapS":10497,"wrapT":10497}],"animations":[{"channels":[{"sampler":0,"target":{"node":0,"path":"scale"}},{"sampler":1,"target":{"node":0,"path":"rotation"}},{"sampler":2,"target":{"node":0,"path":"translation"}},{"sampler":3,"target":{"node":1,"path":"scale"}},{"sampler":4,"target":{"node":1,"path":"rotation"}},{"sampler":5,"target":{"node":1,"path":"translation"}},{"sampler":6,"target":{"node":13,"path":"scale"}},{"sampler":7,"target":{"node":13,"path":"rotation"}},{"sampler":8,"target":{"node":13,"path":"translation"}}],"samplers":[{"input":44,"interpolation":"LINEAR","output":45},{"input":46,"interpolation":"LINEAR","output":47},{"input":48,"interpolation":"LINEAR","output":49},{"input":50,"interpolation":"LINEAR","output":51},{"input":52,"interpolation":"LINEAR","output":53},{"input":54,"interpolation":"LINEAR","output":55},{"input":56,"interpolation":"LINEAR","output":57},{"input":58,"interpolation":"LINEAR","output":59},{"input":60,"interpolation":"LINEAR","output":61}],"name":"Animation"}]}
