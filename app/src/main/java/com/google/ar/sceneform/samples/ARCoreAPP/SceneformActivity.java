@@ -1,4 +1,4 @@
-package com.google.ar.sceneform.samples.hellosceneform;
+package com.google.ar.sceneform.samples.ARCoreAPP;
 
 import android.content.Intent;
 import android.net.Uri;

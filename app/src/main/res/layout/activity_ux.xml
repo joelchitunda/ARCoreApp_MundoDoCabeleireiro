@@ -19,15 +19,16 @@
     android:layout_height="match_parent"
     tools:context=".SceneformActivity">
 
-  <fragment android:name="com.google.ar.sceneform.ux.ArFragment"
-      android:id="@+id/ux_fragment"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      />
-      <Button
-          android:id="@+id/buttonAR"
-          android:layout_width="20px"
-          android:layout_height="20px"
+    <Button
+        android:id="@+id/buttonAR"
+        android:layout_width="20px"
+        android:layout_height="20px"
 
-          />
+        />
+
+    <fragment
+        android:id="@+id/ux_fragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </FrameLayout>

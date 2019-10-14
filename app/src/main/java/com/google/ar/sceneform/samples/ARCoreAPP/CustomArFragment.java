@@ -1,4 +1,4 @@
-package com.google.ar.sceneform.samples.hellosceneform;
+package com.google.ar.sceneform.samples.ARCoreAPP;
 
 import android.content.res.AssetManager;
 import android.util.Log;
