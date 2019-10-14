@@ -1,4 +1,4 @@
-package com.google.ar.sceneform.samples.ARCoreAPP;
+package com.google.ar.sceneform.samples.hellosceneform;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -92,7 +92,7 @@ public class SceneformActivity extends AppCompatActivity {
         ModelRenderable.builder()
                 .setSource(arFragment.getContext(), uri)
                 .build()
-                .thenAccept(modelRenderable -> addNodeToSceneDani(arFragment, anchor, modelRenderable))
+                .thenAccept(modelRenderable -> addNodeToSceneHairFly(arFragment, anchor, modelRenderable))
                 .exceptionally(throwable -> {
                             Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
                             return null;
@@ -121,6 +121,8 @@ public class SceneformActivity extends AppCompatActivity {
             //[PT-BR] • Nesse caso a nossa atividade será abrir um site , isso poderá ser mudado
             //[ENG] • In this case our activity consists in opening a website
             openWebsite1(arFragment.getView());
+            arFragment.getArSceneView().getScene().removeChild(anchorNode);
+            anchorNode.getAnchor().detach();
 
             return true;
         });
@@ -144,13 +146,15 @@ public class SceneformActivity extends AppCompatActivity {
             //[PT-BR] • Nesse caso a nossa atividade será abrir um site , isso poderá ser mudado
             //[ENG] • In this case our activity consists in opening a website
             openWebsite2(arFragment.getView());
+            arFragment.getArSceneView().getScene().removeChild(anchorNode);
+            anchorNode.getAnchor().detach();
 
             return true;
         });
 
     }
 
-    private void addNodeToSceneDani(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+    private void addNodeToSceneHairFly(ArFragment arFragment, Anchor anchor, Renderable renderable) {
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         AnchorNode anchorNode = new AnchorNode(anchor);
         //[PT-BR] • Aqui podemos mudar o tamanho com o qual o modelo 3d aparecerá na tela , caso ele seja muito grande ou muito pequeno

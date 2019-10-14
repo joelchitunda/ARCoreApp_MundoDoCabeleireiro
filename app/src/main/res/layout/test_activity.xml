@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/sceneform_fragment"
-        android:name="com.google.ar.sceneform.samples.ARCoreAPP.CustomArFragment"
+        android:name="com.google.ar.sceneform.samples.hellosceneform.CustomArFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
