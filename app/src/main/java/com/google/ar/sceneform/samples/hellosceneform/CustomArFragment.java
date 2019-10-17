@@ -29,7 +29,8 @@ public class CustomArFragment extends ArFragment {
         return config;
     }
 
-    //Esse método prepara o nosso banco de dados de imagens aumentadas - This method sets up our augmentedImages Database
+    //[PT-BR] • Esse método prepara o nosso banco de dados de imagens aumentadas.
+    //{ENG}	•  This method sets up our augmentedImages Database.
     public boolean setupAugmentedImageDatabase(Config config, Session session) {
         AugmentedImageDatabase augmentedImageDatabase;
         config.setFocusMode(Config.FocusMode.AUTO);
