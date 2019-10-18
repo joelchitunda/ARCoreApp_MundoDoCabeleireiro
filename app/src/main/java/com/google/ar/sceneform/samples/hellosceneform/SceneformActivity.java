@@ -71,6 +71,7 @@ public class SceneformActivity extends AppCompatActivity {
 
     }
 
+    // TODO - Mudar o objeto 3d do mundo pra uma cartinha (Envelope), fazer o menu dos times
     @RequiresApi(api = Build.VERSION_CODES.N)
     //[PT-BR] • O Método a seguir (placeObject) posiciona o modelo 3d sobre a imagemAumentada.
     // Iremos implementar um placeObject difente para cada Imagem aumentada e esse método adicionará
