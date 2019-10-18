@@ -1,4 +1,5 @@
-muriloCard|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/murilo.jpg
-earthAugmented|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/augmented-images-earth.jpg
-daniArt|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/dani-art.jpg
-hairFly|C:\Users\Andreiaverasg\AndroidStudioProjects\hellosceneform\app\src\main\assets/hairfly.jpg
+muriloCard|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/murilo.jpg
+earthAugmented|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/augmented-images-earth.jpg
+daniArt|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/dani-art.jpg
+hairFly|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/hairfly.jpg
+loveMundo|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/loveMundo.png

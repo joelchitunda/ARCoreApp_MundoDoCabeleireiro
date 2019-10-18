@@ -79,11 +79,11 @@ public class SceneformActivity extends AppCompatActivity {
     //[ENG] • The method below (placeOBject) places our 3D object on top of our augmented image.
     // We'll implement a different placeObject for each one of our augmented images. The method will place the
     // 3d object using another method called addNode (There will be a different addNode for every augmened Image).
-    private void placeObjectTerra(ArFragment arFragment, Anchor anchor, Uri uri) {
+    private void placeObjectMundoLove(ArFragment arFragment, Anchor anchor, Uri uri) {
         ModelRenderable.builder()
                 .setSource(arFragment.getContext(), uri)
                 .build()
-                .thenAccept(modelRenderable -> addNodeToSceneTerra(arFragment, anchor, modelRenderable))
+                .thenAccept(modelRenderable -> addNodeToSceneMundoLove(arFragment, anchor, modelRenderable))
                 .exceptionally(throwable -> {
                             Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
                             return null;
@@ -147,7 +147,7 @@ public class SceneformActivity extends AppCompatActivity {
 
     //Implementaremos um addNode referente a cada Imagem aumentada e Esse método conterá as especificações de tamanho do
     // modelo 3d a ser adicionado assim como o evento que irá ser realizado por meio de um toque no nó.
-    private void addNodeToSceneTerra(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+    private void addNodeToSceneMundoLove(ArFragment arFragment, Anchor anchor, Renderable renderable) {
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         AnchorNode anchorNode = new AnchorNode(anchor);
 
@@ -245,8 +245,8 @@ public class SceneformActivity extends AppCompatActivity {
                     imgCont1++;
 
 
-                } else if (augmentedImage.getName().equals("earthAugmented") && (imgCont2 == 0)) {
-                    placeObjectTerra(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("YSL_Libre_bottle_v002.sfb"));
+                } else if (augmentedImage.getName().equals("loveMundo") && (imgCont2 == 0)) {
+                    placeObjectMundoLove(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("YSL_Libre_bottle_v002.sfb"));
                     imgCont2++;
 
                 } else if (augmentedImage.getName().equals("hairFly") && (imgCont3 == 0)) {
