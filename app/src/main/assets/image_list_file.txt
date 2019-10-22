@@ -2,4 +2,4 @@ muriloCard|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabelei
 earthAugmented|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/augmented-images-earth.jpg
 daniArt|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/dani-art.jpg
 hairFly|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/hairfly.jpg
-loveMundo|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/loveMundo.png
+loveMundo|C:\Users\Andreiaverasg\AndroiStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/loveMundo.png

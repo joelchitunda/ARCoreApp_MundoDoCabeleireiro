@@ -242,16 +242,16 @@ public class SceneformActivity extends AppCompatActivity {
                 //[PT-BR] • Cada um dos if's a seguir se refere a uma imagem aumentada diferente contida no nosso banco de dados.
                 //[ENG] • Each one of the if statements below refer to a certain image included in our database.
                 if (augmentedImage.getName().equals("muriloCard") && (imgCont1 == 0)) {
-                    placeObjectMurilo(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("model.sfb"));
+                    placeObjectMurilo(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/model.sfb"));
                     imgCont1++;
 
 
                 } else if (augmentedImage.getName().equals("loveMundo") && (imgCont2 == 0)) {
-                    placeObjectMundoLove(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("YSL_Libre_bottle_v002.sfb"));
+                    placeObjectMundoLove(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/YSL_Libre_bottle_v002.sfb"));
                     imgCont2++;
 
                 } else if (augmentedImage.getName().equals("hairFly") && (imgCont3 == 0)) {
-                    placeObjectHairFly(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("GuerlainBottle.sfb"));
+                    placeObjectHairFly(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/GuerlainBottle.sfb"));
                     imgCont3++;
                 }
             }
