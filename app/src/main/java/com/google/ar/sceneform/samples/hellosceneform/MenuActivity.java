@@ -1,6 +1,5 @@
 package com.google.ar.sceneform.samples.hellosceneform;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +13,7 @@ public class MenuActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       //TODO - descobrir qual é o setContentView correto pro menu (ou criar um) setContentView(R.layout.main);
+        //TODO - descobrir qual é o setContentView correto pro menu (ou criar um) setContentView(R.layout.main);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -33,7 +32,7 @@ public class MenuActivity extends Activity {
                 //startActivity(new Intent(this, SceneformActivity2.class));
                 return true;
 
-                //-TODO -  gambiarra abaixo se nada der certo
+            //-TODO -  gambiarra abaixo se nada der certo
            /* case R.id.time2:
                 startActivity(new Intent(this, SceneformActivity3.class));
                 return true;

@@ -2,8 +2,6 @@ package com.google.ar.sceneform.samples.hellosceneform;
 
 import android.content.res.AssetManager;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 
 import com.google.ar.core.AugmentedImageDatabase;
 import com.google.ar.core.Config;
