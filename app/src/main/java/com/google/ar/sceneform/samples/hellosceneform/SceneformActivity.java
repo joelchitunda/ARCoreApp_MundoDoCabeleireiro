@@ -6,6 +6,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -46,6 +49,25 @@ public class SceneformActivity extends AppCompatActivity {
         arFragment.getArSceneView().getPlaneRenderer().setEnabled(false);
         arFragment.getArSceneView().getScene().addOnUpdateListener(this::onUpdateFrame);
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_options_menu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.time1:
+                startActivity(new Intent(this, SceneformActivity.class));
+                return true;
+            case R.id.time2:
+                openWebsite3(arFragment.getView());
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 

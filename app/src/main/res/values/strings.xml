@@ -16,4 +16,6 @@
 -->
 <resources>
     <string name="app_name">Mundo do Cabeleireiro</string>
+    <string name="time1">Time1</string>
+    <string name="time2">Time2</string>
 </resources>
