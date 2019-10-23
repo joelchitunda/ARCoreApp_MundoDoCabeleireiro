@@ -50,25 +50,6 @@ public class SceneformActivity extends AppCompatActivity {
         arFragment.getArSceneView().getScene().addOnUpdateListener(this::onUpdateFrame);
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
     }
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.my_options_menu, menu);
-        return true;
-    }
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.time1:
-                startActivity(new Intent(this, SceneformActivity.class));
-                return true;
-            case R.id.time2:
-                openWebsite3(arFragment.getView());
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
