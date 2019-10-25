@@ -1,5 +1,5 @@
-muriloCard|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/murilo.jpg
-earthAugmented|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/augmented-images-earth.jpg
-daniArt|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/dani-art.jpg
-hairFly|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/hairfly.jpg
-loveMundo|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/loveMundo.png
+muriloCard|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/murilo.jpg|0.1
+earthAugmented|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/augmented-images-earth.jpg|0.2
+daniArt|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/dani-art.jpg|0.2
+hairFly|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images/hairfly.jpg|0.1
+loveMundo|C:\Users\Andreiaverasg\AndroidStudioProjects\ARCoreApp_MundoDoCabeleireiro\app\src\main\assets\images\loveMundo.png|0.15

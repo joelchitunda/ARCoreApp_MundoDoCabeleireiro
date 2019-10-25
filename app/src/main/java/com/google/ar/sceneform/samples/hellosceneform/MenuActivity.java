@@ -1,52 +1,42 @@
 package com.google.ar.sceneform.samples.hellosceneform;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
-public class MenuActivity extends Activity {
+
+public class MenuActivity extends AppCompatActivity
+        implements View.OnClickListener {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //TODO - descobrir qual é o setContentView correto pro menu (ou criar um) setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
+
+        Button mButton = findViewById(R.id.time1);
+        mButton.setOnClickListener(this);
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.my_options_menu, menu);
-        return true;
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.time1:
-                startActivity(new Intent(this, SceneformActivity.class));
-                return true;
-            case R.id.time2:
-                //startActivity(new Intent(this, SceneformActivity2.class));
-                return true;
+                Intent intentNF = new Intent(this, SceneformActivity.class);
+                startActivity(intentNF);
 
-            //-TODO -  gambiarra abaixo se nada der certo
-           /* case R.id.time2:
-                startActivity(new Intent(this, SceneformActivity3.class));
-                return true;
-            case R.id.time3:
-                startActivity(new Intent(this, SceneformActivity4.class));
-                return true;
-            case R.id.time4:
-                startActivity(new Intent(this, SceneformActivity5.class));
-                return true;
-            case R.id.time5:
-                startActivity(new Intent(this, SceneformActivity6.class));
-                return true;*/
-            default:
-                return super.onOptionsItemSelected(item);
+                break;
+
+            case R.id.time2:
+                //Intent intentNF = new Intent(this, SceneformActivity2.class);
+                //startActivity(intentNF);
+                break;
+
         }
     }
 }
+
+
+

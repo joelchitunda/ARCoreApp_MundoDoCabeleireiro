@@ -34,7 +34,8 @@ public class SceneformActivity extends AppCompatActivity {
     int imgCont1 = 0;
     int imgCont2 = 0;
     int imgCont3 = 0;
-
+    int imgCont4 = 0;
+    int imgCont5 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,18 +51,11 @@ public class SceneformActivity extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    //[PT-BR] • O Método a seguir (placeObject) posiciona o modelo 3d sobre a imagemAumentada.
-    // Iremos implementar um placeObject difente para cada Imagem aumentada e esse método adicionará
-    // o modelo 3d específico requerido usando o addNOde (Vamos implementar um addNode diferente para cada imagem aumentada).
-
-    //[ENG] • The method below (placeOBject) places our 3D object on top of our augmented image.
-    // We'll implement a different placeObject for each one of our augmented images. The method will place the
-    // 3d object using another method called addNode (There will be a different addNode for every augmened Image).
-    private void placeObjectMurilo(ArFragment arFragment, Anchor anchor, Uri uri) {
+    private void placeObject1(ArFragment arFragment, Anchor anchor, Uri uri) {
         ModelRenderable.builder()
                 .setSource(arFragment.getContext(), uri)
                 .build()
-                .thenAccept(modelRenderable -> addNodeToSceneMurilo(arFragment, anchor, modelRenderable))
+                .thenAccept(modelRenderable -> addNodeToScene1(arFragment, anchor, modelRenderable))
                 .exceptionally(throwable -> {
                             Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
                             return null;
@@ -73,18 +67,11 @@ public class SceneformActivity extends AppCompatActivity {
 
     // TODO - Mudar o objeto 3d do mundo pra uma cartinha (Envelope), fazer o menu dos times
     @RequiresApi(api = Build.VERSION_CODES.N)
-    //[PT-BR] • O Método a seguir (placeObject) posiciona o modelo 3d sobre a imagemAumentada.
-    // Iremos implementar um placeObject difente para cada Imagem aumentada e esse método adicionará
-    // o modelo 3d específico requerido usando o addNOde (Vamos implementar um addNode diferente para cada imagem aumentada).
-
-    //[ENG] • The method below (placeOBject) places our 3D object on top of our augmented image.
-    // We'll implement a different placeObject for each one of our augmented images. The method will place the
-    // 3d object using another method called addNode (There will be a different addNode for every augmened Image).
-    private void placeObjectMundoLove(ArFragment arFragment, Anchor anchor, Uri uri) {
+    private void placeObject2(ArFragment arFragment, Anchor anchor, Uri uri) {
         ModelRenderable.builder()
                 .setSource(arFragment.getContext(), uri)
                 .build()
-                .thenAccept(modelRenderable -> addNodeToSceneMundoLove(arFragment, anchor, modelRenderable))
+                .thenAccept(modelRenderable -> addNodeToScene2(arFragment, anchor, modelRenderable))
                 .exceptionally(throwable -> {
                             Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
                             return null;
@@ -95,18 +82,41 @@ public class SceneformActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    //[PT-BR] • O Método a seguir (placeObject) posiciona o modelo 3d sobre a imagemAumentada.
-    // Iremos implementar um placeObject difente para cada Imagem aumentada e esse método adicionará
-    // o modelo 3d específico requerido usando o addNOde (Vamos implementar um addNode diferente para cada imagem aumentada).
-
-    //[ENG] • The method below (placeOBject) places our 3D object on top of our augmented image.
-    // We'll implement a different placeObject for each one of our augmented images. The method will place the
-    // 3d object using another method called addNode (There will be a different addNode for every augmened Image).
-    private void placeObjectHairFly(ArFragment arFragment, Anchor anchor, Uri uri) {
+    private void placeObject3(ArFragment arFragment, Anchor anchor, Uri uri) {
         ModelRenderable.builder()
                 .setSource(arFragment.getContext(), uri)
                 .build()
-                .thenAccept(modelRenderable -> addNodeToSceneHairFly(arFragment, anchor, modelRenderable))
+                .thenAccept(modelRenderable -> addNodeToScene3(arFragment, anchor, modelRenderable))
+                .exceptionally(throwable -> {
+                            Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
+                            return null;
+                        }
+
+                );
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void placeObject4(ArFragment arFragment, Anchor anchor, Uri uri) {
+        ModelRenderable.builder()
+                .setSource(arFragment.getContext(), uri)
+                .build()
+                .thenAccept(modelRenderable -> addNodeToScene4(arFragment, anchor, modelRenderable))
+                .exceptionally(throwable -> {
+                            Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
+                            return null;
+                        }
+
+                );
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void placeObject5(ArFragment arFragment, Anchor anchor, Uri uri) {
+        ModelRenderable.builder()
+                .setSource(arFragment.getContext(), uri)
+                .build()
+                .thenAccept(modelRenderable -> addNodeToScene5(arFragment, anchor, modelRenderable))
                 .exceptionally(throwable -> {
                             Toast.makeText(arFragment.getContext(), "Error:" + throwable.getMessage(), Toast.LENGTH_LONG).show();
                             return null;
@@ -119,22 +129,23 @@ public class SceneformActivity extends AppCompatActivity {
 
     //Implementaremos um addNode referente a cada Imagem aumentada e Esse método conterá as especificações de tamanho do
     // modelo 3d a ser adicionado assim como o evento que irá ser realizado por meio de um toque no nó.
-    private void addNodeToSceneMurilo(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+    private void addNodeToScene1(ArFragment arFragment, Anchor anchor, Renderable renderable) {
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         AnchorNode anchorNode = new AnchorNode(anchor);
         //[PT-BR] • Usando o método (getScaleController) podemos mudar o tamanho com o qual o modelo 3d aparecerá na tela , caso ele seja muito grande ou muito pequeno.
         //[ENG] • The next two lines of code below show how it is possible to change the size of our 3d object , in case it is too big or too small.
-        node.getScaleController().setMaxScale(0.20f);
-        node.getScaleController().setMinScale(0.15f);
+        node.getScaleController().setMaxScale(0.012f);
+        node.getScaleController().setMinScale(0.0115f);
 
         node.setRenderable(renderable);
         node.setParent(anchorNode);
         arFragment.getArSceneView().getScene().addChild(anchorNode);
         node.select();
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
-            //[PT-BR] • Nesse caso a nossa atividade será abrir um site , isso poderá ser mudado
-            //[ENG] • In this case our activity consists in opening a website
-            openWebsite1(arFragment.getView());
+            //[PT-BR] • Nesse caso a nossa atividade será mostrar uma mensagem (Toast)na tela , isso poderá ser mudado
+            //[ENG] • In this case our activity consists in showing a message (Toast)
+            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A SEGUNDA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+
 
             //[PT-BR] • Para evitar bugs com os objetos 3d , vamos removê-los da cena após o toque e a realização da atividade
             //[ENG] • To avoid bugs regarding our 3d objects,we'll remove them after the touch and the activity occur
@@ -146,16 +157,13 @@ public class SceneformActivity extends AppCompatActivity {
 
     }
 
-    //Implementaremos um addNode referente a cada Imagem aumentada e Esse método conterá as especificações de tamanho do
-    // modelo 3d a ser adicionado assim como o evento que irá ser realizado por meio de um toque no nó.
-    private void addNodeToSceneMundoLove(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+
+    private void addNodeToScene2(ArFragment arFragment, Anchor anchor, Renderable renderable) {
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         AnchorNode anchorNode = new AnchorNode(anchor);
 
-        //[PT-BR] • Usando o método (getScaleController) podemos mudar o tamanho com o qual o modelo 3d aparecerá na tela , caso ele seja muito grande ou muito pequeno.
-        //[ENG] • The next two lines of code below show how it is possible to change the size of our 3d object , in case it is too big or too small.
-        node.getScaleController().setMaxScale(0.05f);
-        node.getScaleController().setMinScale(0.025f);
+        node.getScaleController().setMaxScale(0.25f);
+        node.getScaleController().setMinScale(0.24f);
 
         node.setRenderable(renderable);
         node.setParent(anchorNode);
@@ -163,12 +171,10 @@ public class SceneformActivity extends AppCompatActivity {
         node.select();
 
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
-            //[PT-BR] • Nesse caso a nossa atividade será abrir um site , isso poderá ser mudado.
-            //[ENG] • In this case our activity consists in opening a website.
-            openWebsite2(arFragment.getView());
 
-            //[PT-BR] • Para evitar bugs com os objetos 3d , vamos removê-los da cena após o toque e a realização da atividade
-            //[ENG] • To avoid bugs regarding our 3d objects,we'll remove them after the touch and the activity occur
+            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A TERCEIRA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+
+
             arFragment.getArSceneView().getScene().removeChild(anchorNode);
             anchorNode.getAnchor().detach();
 
@@ -177,14 +183,11 @@ public class SceneformActivity extends AppCompatActivity {
 
     }
 
-    //Implementaremos um addNode referente a cada Imagem aumentada e Esse método conterá as especificações de tamanho do
-    // modelo 3d a ser adicionado assim como o evento que irá ser realizado por meio de um toque no nó.
-    private void addNodeToSceneHairFly(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+
+    private void addNodeToScene3(ArFragment arFragment, Anchor anchor, Renderable renderable) {
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
         AnchorNode anchorNode = new AnchorNode(anchor);
-        //[PT-BR] • Usando o método (getScaleController) podemos mudar o tamanho com o qual o modelo 3d aparecerá na tela , caso ele seja muito grande ou muito pequeno.
-        //[ENG] • The next two lines of code below show how it is possible to change the size of our 3d object , in case it is too big or too small.
-        node.getScaleController().setMaxScale(0.05f);
+        node.getScaleController().setMaxScale(0.1f);
         node.getScaleController().setMinScale(0.025f);
 
         node.setRenderable(renderable);
@@ -192,12 +195,10 @@ public class SceneformActivity extends AppCompatActivity {
         arFragment.getArSceneView().getScene().addChild(anchorNode);
         node.select();
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
-            //[PT-BR] • Nesse caso a nossa atividade será abrir um site , isso poderá ser mudado
-            //[ENG] • In this case our activity consists in opening a website
-            openWebsite3(arFragment.getView());
 
-            //[PT-BR] • Para evitar bugs com os objetos 3d , vamos removê-los da cena após o toque e a realização da atividade
-            //[ENG] • To avoid bugs regarding our 3d objects,we'll remove them after the touch and the activity occur
+            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A QUARTA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+
+
             arFragment.getArSceneView().getScene().removeChild(anchorNode);
             anchorNode.getAnchor().detach();
             return true;
@@ -206,6 +207,57 @@ public class SceneformActivity extends AppCompatActivity {
 
 
     }
+
+    private void addNodeToScene4(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+        TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
+        AnchorNode anchorNode = new AnchorNode(anchor);
+        node.getScaleController().setMaxScale(0.05f);
+        node.getScaleController().setMinScale(0.025f);
+
+        node.setRenderable(renderable);
+        node.setParent(anchorNode);
+        arFragment.getArSceneView().getScene().addChild(anchorNode);
+        node.select();
+        node.setOnTouchListener((hitTestResult, motionEvent) -> {
+
+            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A QUINTA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+
+
+
+            arFragment.getArSceneView().getScene().removeChild(anchorNode);
+            anchorNode.getAnchor().detach();
+            return true;
+
+        });
+
+
+    }
+
+    private void addNodeToScene5(ArFragment arFragment, Anchor anchor, Renderable renderable) {
+        TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
+        AnchorNode anchorNode = new AnchorNode(anchor);
+        node.getScaleController().setMaxScale(0.25f);
+        node.getScaleController().setMinScale(0.025f);
+
+        node.setRenderable(renderable);
+        node.setParent(anchorNode);
+        arFragment.getArSceneView().getScene().addChild(anchorNode);
+        node.select();
+        node.setOnTouchListener((hitTestResult, motionEvent) -> {
+
+            Toast.makeText(arFragment.getContext(), "PARABÉNS! VOCÊ CONSEGUIU CHEGAR NA ÚLTIMA IMAGEM!", Toast.LENGTH_LONG).show();
+
+
+            arFragment.getArSceneView().getScene().removeChild(anchorNode);
+            anchorNode.getAnchor().detach();
+            return true;
+
+        });
+
+
+    }
+
+
 
 
     //[PT-BR] • Atividades
@@ -242,17 +294,25 @@ public class SceneformActivity extends AppCompatActivity {
                 //[PT-BR] • Cada um dos if's a seguir se refere a uma imagem aumentada diferente contida no nosso banco de dados.
                 //[ENG] • Each one of the if statements below refer to a certain image included in our database.
                 if (augmentedImage.getName().equals("muriloCard") && (imgCont1 == 0)) {
-                    placeObjectMurilo(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/model.sfb"));
+                    placeObject1(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/MagnifyingGlass.sfb"));
                     imgCont1++;
 
 
-                } else if (augmentedImage.getName().equals("loveMundo") && (imgCont2 == 0)) {
-                    placeObjectMundoLove(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/YSL_Libre_bottle_v002.sfb"));
+                } else if (augmentedImage.getName().equals("earthAugmented") && (imgCont2 == 0)) {
+                    placeObject2(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Present.sfb"));
                     imgCont2++;
 
                 } else if (augmentedImage.getName().equals("hairFly") && (imgCont3 == 0)) {
-                    placeObjectHairFly(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/GuerlainBottle.sfb"));
+                    placeObject3(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Present.sfb"));
                     imgCont3++;
+
+                } else if (augmentedImage.getName().equals("daniArt") && (imgCont4 == 0)) {
+                    placeObject4(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Envelope.sfb"));
+                    imgCont4++;
+
+                } else if (augmentedImage.getName().equals("loveMundo") && (imgCont5 == 0)) {
+                    placeObject5(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/andy.sfb"));
+                    imgCont5++;
                 }
             }
         }

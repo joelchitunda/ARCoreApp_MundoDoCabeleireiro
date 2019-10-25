@@ -15,8 +15,9 @@
    limitations under the License.
 -->
 <resources>
-    <string name="app_name">Mundo do Cabeleireiro</string>
+    <string name="app_name">CaçaAoTesouro-MDC</string>
     <string name="time1">Time1</string>
     <string name="time2">Time2</string>
-    <string name="menu_name">Escolha o Time</string>
+    <string name="menu_name">CaçaAoTesouro-MDC</string>
+    <string name="time3">Time 3</string>
 </resources>

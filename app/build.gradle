@@ -58,34 +58,41 @@ dependencies {
 
 apply plugin: 'com.google.ar.sceneform.plugin'
 
-sceneform.asset('sampledata/models/andy.obj',
-        'default',
-        'sampledata/models/andy.sfa',
-        'src/main/res/raw/andy')
 
 
 
-sceneform.asset('sampledata/models/model.obj',
-        'default',
-        'sampledata/models/model.sfa',
-        'src/main/assets/model')
+
 repositories {
     mavenCentral()
 }
 
 
+sceneform.asset('sampledata/models/model.obj',
+        'default',
+        'sampledata/models/model.sfa',
+        'src/main/assets/models/Present')
 
 sceneform.asset('sampledata/models/andy.obj',
         'default',
         'sampledata/models/andy.sfa',
-        'src/main/assets/andy')
+        'src/main/assets/models/andy')
 
 sceneform.asset('sampledata/models/GuerlainBottle.gltf',
         'default',
         'sampledata/models/GuerlainBottle.sfa',
-        'src/main/assets/GuerlainBottle')
+        'src/main/assets/models/GuerlainBottle')
 
 sceneform.asset('sampledata/models/YSL_Libre_bottle_v002.gltf',
         'default',
         'sampledata/models/YSL_Libre_bottle_v002.sfa',
-        'src/main/assets/YSL_Libre_bottle_v002')
+        'src/main/assets/models/PerfumeBottle')
+
+sceneform.asset('sampledata/models/Magnifying Glass.obj',
+        'default',
+        'sampledata/models/Magnifying Glass.sfa',
+        'src/main/assets/models/MagnifyingGlass')
+
+sceneform.asset('sampledata/models/model2.obj',
+        'default',
+        'sampledata/models/model2.sfa',
+        'src/main/assets/models/Envelope')
