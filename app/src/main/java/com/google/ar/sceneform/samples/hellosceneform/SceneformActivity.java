@@ -36,6 +36,9 @@ public class SceneformActivity extends AppCompatActivity {
     int imgCont3 = 0;
     int imgCont4 = 0;
     int imgCont5 = 0;
+    boolean visto1 = false;
+    boolean visto2 = false;
+    boolean textSeen1 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,8 +137,8 @@ public class SceneformActivity extends AppCompatActivity {
         AnchorNode anchorNode = new AnchorNode(anchor);
         //[PT-BR] • Usando o método (getScaleController) podemos mudar o tamanho com o qual o modelo 3d aparecerá na tela , caso ele seja muito grande ou muito pequeno.
         //[ENG] • The next two lines of code below show how it is possible to change the size of our 3d object , in case it is too big or too small.
-        node.getScaleController().setMaxScale(0.012f);
-        node.getScaleController().setMinScale(0.0115f);
+        node.getScaleController().setMaxScale(0.0072f);
+        node.getScaleController().setMinScale(0.0055f);
 
         node.setRenderable(renderable);
         node.setParent(anchorNode);
@@ -144,7 +147,7 @@ public class SceneformActivity extends AppCompatActivity {
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
             //[PT-BR] • Nesse caso a nossa atividade será mostrar uma mensagem (Toast)na tela , isso poderá ser mudado
             //[ENG] • In this case our activity consists in showing a message (Toast)
-            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A SEGUNDA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+            Toast.makeText(arFragment.getContext(), "IMAGEM 1 - COLOQUE A DICA PARA A SEGUNDA IMAGEM AQUI", Toast.LENGTH_LONG).show();
 
 
             //[PT-BR] • Para evitar bugs com os objetos 3d , vamos removê-los da cena após o toque e a realização da atividade
@@ -172,7 +175,7 @@ public class SceneformActivity extends AppCompatActivity {
 
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
 
-            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A TERCEIRA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+            Toast.makeText(arFragment.getContext(), "IMAGEM 2 - COLOQUE A DICA PARA A TERCEIRA IMAGEM AQUI", Toast.LENGTH_LONG).show();
 
 
             arFragment.getArSceneView().getScene().removeChild(anchorNode);
@@ -196,7 +199,7 @@ public class SceneformActivity extends AppCompatActivity {
         node.select();
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
 
-            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A QUARTA IMAGEM AQUI", Toast.LENGTH_LONG).show();
+            Toast.makeText(arFragment.getContext(), "IMAGEM 3 - COLOQUE A DICA PARA A QUARTA IMAGEM AQUI", Toast.LENGTH_LONG).show();
 
 
             arFragment.getArSceneView().getScene().removeChild(anchorNode);
@@ -220,8 +223,7 @@ public class SceneformActivity extends AppCompatActivity {
         node.select();
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
 
-            Toast.makeText(arFragment.getContext(), "COLOQUE A DICA PARA A QUINTA IMAGEM AQUI", Toast.LENGTH_LONG).show();
-
+            Toast.makeText(arFragment.getContext(), "IMAGEM 4 - COLOQUE A DICA PARA A QUINTA IMAGEM AQUI", Toast.LENGTH_LONG).show();
 
 
             arFragment.getArSceneView().getScene().removeChild(anchorNode);
@@ -245,7 +247,7 @@ public class SceneformActivity extends AppCompatActivity {
         node.select();
         node.setOnTouchListener((hitTestResult, motionEvent) -> {
 
-            Toast.makeText(arFragment.getContext(), "PARABÉNS! VOCÊ CONSEGUIU CHEGAR NA ÚLTIMA IMAGEM!", Toast.LENGTH_LONG).show();
+            Toast.makeText(arFragment.getContext(), "IMAGEM 5 - PARABÉNS! VOCÊ CONSEGUIU CHEGAR NA ÚLTIMA IMAGEM!", Toast.LENGTH_LONG).show();
 
 
             arFragment.getArSceneView().getScene().removeChild(anchorNode);
@@ -256,8 +258,6 @@ public class SceneformActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
     //[PT-BR] • Atividades
@@ -281,39 +281,67 @@ public class SceneformActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void onUpdateFrame(FrameTime frameTime) {
         Frame frame = arFragment.getArSceneView().getArFrame();
-
         Collection<AugmentedImage> augmentedImages = frame.getUpdatedTrackables(AugmentedImage.class);
-        //[PT-BR] • Esse é o loop que checa constantemente se as imagens no nosso banco de dadoes estão sendo vistas pela câmera na vida real.
-        // Caso alguma dessas imagens seja identificada na vida real , mostraremos um objeto 3d na tela posicionado (ancorado) sobre essa imagem.
-        //[ENG] • This loop is constantly comparing every frame seen in the real world (by our phone camera) with the images contained in our
-        // augmented images Database. When an image caught by our camera matches any image in our database , a 3d object is going to be placed on top
+        //[PT-BR] • Esse é o loop que checa constantemente se as imagens no nosso banco de dadoes estão sendo vistas pela
+        // câmera na vida real. Caso alguma dessas imagens seja identificada na vida real, e esteja sendo vista de acordo
+        // com a nossa rota prefenida ,mostraremos um objeto 3d na tela posicionado (ancorado) sobre essa imagem.
+        //[ENG] • This loop is constantly comparing every frame seen in the real world (by our phone camera) with the
+        // images contained in our augmented images Database. When an image caught by our camera matches any image in our
+        // database and that image is seen in the correct order , a 3d object is going to be placed on top
         // of that image (This is supposed to only happen ONCE per image - using the method placeOBject).
+
         for (AugmentedImage augmentedImage : augmentedImages) {
             if (augmentedImage.getTrackingState() == TrackingState.TRACKING) {
 
-                //[PT-BR] • Cada um dos if's a seguir se refere a uma imagem aumentada diferente contida no nosso banco de dados.
-                //[ENG] • Each one of the if statements below refer to a certain image included in our database.
-                if (augmentedImage.getName().equals("muriloCard") && (imgCont1 == 0)) {
+                //[PT-BR] • Cada um dos if/else's a seguir checa uma imagem aumentada diferente contida no nosso banco de dados.
+                //E cada if/else aninhado verifica se a rota de imagens foi cumprida (Se nenhuma imagem foi pulada e/ou vista fora de ordem).
+                //[ENG] • Each one of the if statements below check a certain image included in our database. And every nested if/else
+                // statements check if the images were captured in the correct order (Meaning that no image has been skipped).
+                if (augmentedImage.getName().equals("muriloCard") && imgCont1==0) {
                     placeObject1(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/MagnifyingGlass.sfb"));
                     imgCont1++;
-
-
-                } else if (augmentedImage.getName().equals("earthAugmented") && (imgCont2 == 0)) {
-                    placeObject2(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Present.sfb"));
-                    imgCont2++;
-
-                } else if (augmentedImage.getName().equals("hairFly") && (imgCont3 == 0)) {
-                    placeObject3(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Present.sfb"));
-                    imgCont3++;
-
-                } else if (augmentedImage.getName().equals("daniArt") && (imgCont4 == 0)) {
-                    placeObject4(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Envelope.sfb"));
-                    imgCont4++;
-
-                } else if (augmentedImage.getName().equals("loveMundo") && (imgCont5 == 0)) {
-                    placeObject5(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/andy.sfb"));
-                    imgCont5++;
                 }
+                if (augmentedImage.getName().equals("earthAugmented") && (imgCont2==0)) {
+                    if (textSeen1 == true && (imgCont1!=0)){
+                        placeObject2(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Present.sfb"));
+                        imgCont2++;
+                    }else if (textSeen1 == false) {
+                        Toast.makeText(arFragment.getContext(), "Você está na imagem terra. Você está na imagem errada.", Toast.LENGTH_LONG).show();
+                        textSeen1 = true;
+                    }
+
+                }
+
+                /*  else if (augmentedImage.getName().equals("hairFly") && (imgCont3 == 0)) {
+                    if((imgCont1==1)&&(imgCont2==1)&&(imgCont4==0)&&(imgCont5==0)) {
+                        placeObject3(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/Present.sfb"));
+                        imgCont3++;
+                    }
+                    else{
+                        Toast.makeText(arFragment.getContext(), "Você está na imagem errada.", Toast.LENGTH_LONG).show();
+
+                    }
+
+                }  else if (augmentedImage.getName().equals("daniArt") && (imgCont4 == 0)) {
+                    if((imgCont1==1)&&(imgCont2==1)&&(imgCont3==1)&&(imgCont5==0)) {
+                        placeObject4(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/PerfumeBottle.sfb"));
+                        imgCont4++;
+                    }
+                    else {
+                        Toast.makeText(arFragment.getContext(), "Você está na imagem errada.", Toast.LENGTH_LONG).show();
+
+                    }
+
+                } else if (augmentedImage.getName().equals("loveMundo") && (imgCont5 == 0)){
+                    if((imgCont1==1)&&(imgCont2==1)&&(imgCont3==1)&&(imgCont4==1)) {
+                        placeObject5(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("models/andy.sfb"));
+                        imgCont5++;
+                    }
+                    else{
+                        Toast.makeText(arFragment.getContext(), "Você está na imagem errada.", Toast.LENGTH_LONG).show();
+
+                    }
+                } */
             }
         }
     }
